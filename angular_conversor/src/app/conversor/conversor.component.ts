@@ -12,33 +12,34 @@ cambio: number = 0;
 
 
 cels_Kelv(){
-  this.cambio = this.temp + 273.15;
+  this.cambio = (this.temp * 1) + 273.15;
   this.cambio = parseFloat(this.cambio.toFixed(2));
 }
 
 cels_fahr(){
 
+  this.cambio = (this.temp * 1.8) + 32;
   this.cambio = parseFloat(this.cambio.toFixed(2));
 }
 
 kelv_cels(){
-
+  this.cambio = this.temp - 273.15;
   this.cambio = parseFloat(this.cambio.toFixed(2));
 }
 
 kelv_fahr(){
-
+  this.cambio = 1.8 * (this.temp - 273.15) + 32;
   this.cambio = parseFloat(this.cambio.toFixed(2));
 }
 
 fahr_cels(){
-
-  this.cambio = parseFloat(this.cambio.toFixed(2));
+  this.cambio = (this.temp - 32) * 0.5555555556;
+  this.cambio = parseFloat(this.cambio.toFixed(5));
 }
 
 fahr_kelv(){
-
-  this.cambio = parseFloat(this.cambio.toFixed(2));
+  this.cambio = (this.temp - 32) * 0.5555555556 + 273.15;
+  this.cambio = parseFloat(this.cambio.toFixed(3));
 }
 
 }
